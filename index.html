@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Conecta Mais – Autoimagem Profissional na Internet</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Conecta Mais ajuda autônomos e pequenos negócios a construírem uma autoimagem forte e profissional na internet, com perfis alinhados, visuais coerentes e comunicação clara.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --roxo-primario: #6310F9;
+      --roxo-secundario: #7A3BFA;
+      --fundo-claro: #FFFFFF;
+      --texto-escuro: #111827;
+      --cinza: #6B7280;
+      --bg-secao: #F9FAFB;
+      --amarelo: #FFC300;
+      --radius: 16px;
+      --shadow-card: 0 18px 45px rgba(0, 0, 0, 0.06);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+      background-color: var(--fundo-claro);
+      color: var(--texto-escuro);
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 16px;
+    }
+
+    /* Header / Navbar */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(255, 255, 255, 0.9);
+      border-bottom: 1px solid rgba(148, 163, 184, 0.18);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 0;
+      gap: 16px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+      border-radius: 999px;
+      background: radial-gradient(circle at 0% 0%, var(--amarelo), var(--roxo-primario), var(--roxo-secundario));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .logo-text-main {
+      font-weight: 700;
+      font-size: 18px;
+    }
+
+    .logo-text-sub {
+      font-size: 12px;
+      color: var(--cinza);
+      margin-top: -2px;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      font-size: 14px;
+    }
+
+    .nav-links a {
+      color: var(--cinza);
+      font-weight: 500;
+    }
+
+    .nav-links a:hover {
+      color: var(--roxo-primario);
+    }
+
+    .btn-nav {
+      padding: 8px 16px;
+      border-radius: 999px;
+      border: 1px solid rgba(99,16,249,0.16);
+      background: #ffffff;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--roxo-primario);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      cursor: pointer;
+    }
+
+    .btn-nav span {
+      font-size: 16px;
+    }
+
+    .menu-toggle {
+      display: none;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    /* Botões gerais */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 22px;
+      border-radius: 999px;
+      border: none;
+      cursor: pointer;
+      background: linear-gradient(135deg, var(--roxo-primario), var(--roxo-secundario));
+      color: #fff;
+      font-weight: 600;
+      font-size: 15px;
+      box-shadow: 0 14px 30px rgba(99, 16, 249, 0.4);
+      transition: transform 0.15s ease, box-shadow 0.15s ease, filter 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      filter: brightness(1.05);
+      box-shadow: 0 20px 40px rgba(99, 16, 249, 0.5);
+    }
+
+    .btn-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 12px 20px;
+      border-radius: 999px;
+      border: 1px solid rgba(148, 163, 184, 0.5);
+      background: #ffffff;
+      font-weight: 500;
+      font-size: 14px;
+      color: var(--texto-escuro);
+      cursor: pointer;
+      transition: background 0.15s ease, border-color 0.15s ease;
+    }
+
+    .btn-secondary:hover {
+      background: #F3F4F6;
+      border-color: rgba(148, 163, 184, 0.9);
+    }
+
+    /* Hero */
+    .hero {
+      padding: 40px 0 64px;
+      background: radial-gradient(circle at top left, rgba(99,16,249,0.14), transparent 55%),
+                  radial-gradient(circle at bottom right, rgba(122,59,250,0.1), transparent 55%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: center;
+    }
+
+    .badge-top {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: rgba(99, 16, 249, 0.06);
+      color: var(--roxo-primario);
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 16px;
+    }
+
+    .badge-top-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: var(--amarelo);
+    }
+
+    .hero-title {
+      font-size: 32px;
+      line-height: 1.1;
+      margin-bottom: 12px;
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, var(--roxo-primario), var(--roxo-secundario));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero-subtitle {
+      font-size: 15px;
+      color: var(--cinza);
+      max-width: 480px;
+      margin-bottom: 24px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 20px;
+    }
+
+    .hero-note {
+      font-size: 12px;
+      color: var(--cinza);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .hero-note-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 999px;
+      background: #22C55E;
+    }
+
+    /* >>> CARD AJUSTADO AQUI <<< */
+    .hero-card {
+      border-radius: 22px;
+      padding: 18px 18px 16px;
+      background: linear-gradient(135deg, #5A0EE0, #7A3BFA); /* degradê mais escuro */
+      color: #F2F2F3; /* branco um pouco mais “forte” */
+      box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card-tag {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      opacity: 0.85;
+      margin-bottom: 6px;
+    }
+
+    .hero-card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .hero-card-sub {
+      font-size: 12px;
+      opacity: 1; /* texto 100% visível */
+      margin-bottom: 14px;
+    }
+
+    .hero-list {
+      list-style: none;
+      font-size: 12px;
+      display: grid;
+      gap: 6px;
+      color: #F2F2F3;
+    }
+
+    .hero-list li {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .hero-list span {
+      font-size: 16px;
+      line-height: 1;
+      margin-top: -2px;
+    }
+
+    .hero-card-circle {
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      border-radius: 999px;
+      border: 1px dashed rgba(255, 255, 255, 0.22);
+      top: -60px;
+      right: -60px;
+    }
+
+    /* Seções genéricas */
+    section {
+      padding: 40px 0;
+    }
+
+    .section-header {
+      text-align: left;
+      margin-bottom: 24px;
+    }
+
+    .section-kicker {
+      font-size: 12px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--roxo-primario);
+      margin-bottom: 4px;
+    }
+
+    .section-title {
+      font-size: 22px;
+      margin-bottom: 4px;
+    }
+
+    .section-title span {
+      background: linear-gradient(135deg, var(--roxo-primario), var(--roxo-secundario));
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .section-subtitle {
+      font-size: 14px;
+      color: var(--cinza);
+      max-width: 520px;
+    }
+
+    .bg-alt {
+      background: var(--bg-secao);
+    }
+
+    /* Sobre */
+    .sobre-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 32px;
+      align-items: flex-start;
+    }
+
+    .sobre-text p {
+      font-size: 14px;
+      color: var(--cinza);
+      margin-bottom: 12px;
+    }
+
+    .sobre-list {
+      list-style: none;
+      font-size: 14px;
+      display: grid;
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .sobre-list li {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .sobre-list span {
+      font-size: 14px;
+      color: #22C55E;
+    }
+
+    .sobre-card {
+      border-radius: var(--radius);
+      border: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 16px 16px 14px;
+      background: #ffffff;
+      box-shadow: 0 14px 30px rgba(15, 23, 42, 0.04);
+      font-size: 13px;
+    }
+
+    .sobre-card-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      gap: 8px;
+    }
+
+    .sobre-card-title {
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .sobre-card-pill {
+      padding: 3px 8px;
+      border-radius: 999px;
+      background: rgba(99, 16, 249, 0.06);
+      color: var(--roxo-primario);
+      font-size: 10px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+    }
+
+    .sobre-card-body p {
+      margin-bottom: 4px;
+      color: var(--cinza);
+    }
+
+    .sobre-card-body strong {
+      color: var(--texto-escuro);
+    }
+
+    /* Cards / Grids */
+    .servicos-grid,
+    .beneficios-grid,
+    .depo-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .card {
+      border-radius: var(--radius);
+      background: #ffffff;
+      padding: 16px 16px 14px;
+      box-shadow: var(--shadow-card);
+      border: 1px solid rgba(148, 163, 184, 0.18);
+      font-size: 13px;
+    }
+
+    .card-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 999px;
+      background: rgba(99, 16, 249, 0.06);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 10px;
+      font-size: 16px;
+      color: var(--roxo-primario);
+    }
+
+    .card-title {
+      font-weight: 600;
+      margin-bottom: 4px;
+      font-size: 14px;
+    }
+
+    .card-text {
+      color: var(--cinza);
+      margin-bottom: 8px;
+    }
+
+    .card-list {
+      list-style: none;
+      display: grid;
+      gap: 4px;
+      padding-left: 0;
+    }
+
+    .card-list li {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .card-list span {
+      font-size: 14px;
+      color: var(--roxo-primario);
+    }
+
+    /* Depoimentos */
+    .depo-card {
+      border-radius: var(--radius);
+      border: 1px solid rgba(148, 163, 184, 0.3);
+      background: #ffffff;
+      padding: 14px 14px 12px;
+      font-size: 12px;
+    }
+
+    .depo-text {
+      color: var(--cinza);
+      margin-bottom: 10px;
+      font-style: italic;
+    }
+
+    .depo-footer {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 11px;
+    }
+
+    .depo-avatar {
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: linear-gradient(135deg, var(--roxo-primario), var(--roxo-secundario));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 600;
+      font-size: 12px;
+    }
+
+    .depo-name {
+      font-weight: 600;
+    }
+
+    .depo-role {
+      color: var(--cinza);
+    }
+
+    /* CTA final */
+    .cta-final {
+      border-radius: 24px;
+      padding: 22px 20px 20px;
+      background: linear-gradient(135deg, var(--roxo-primario), var(--roxo-secundario));
+      color: #F9FAFB;
+      display: grid;
+      grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr);
+      gap: 16px;
+      align-items: center;
+      box-shadow: var(--shadow-card);
+      margin-bottom: 24px;
+    }
+
+    .cta-final h2 {
+      font-size: 20px;
+      margin-bottom: 6px;
+    }
+
+    .cta-final p {
+      font-size: 14px;
+      opacity: 0.9;
+      max-width: 460px;
+    }
+
+    .cta-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 8px;
+    }
+
+    .cta-badge {
+      font-size: 11px;
+      opacity: 0.9;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid rgba(148, 163, 184, 0.35);
+      padding: 14px 0 20px;
+      font-size: 12px;
+      color: var(--cinza);
+    }
+
+    .footer-line {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 8px;
+      align-items: center;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 12px;
+    }
+
+    .footer-links a {
+      text-decoration: underline;
+      text-decoration-style: dotted;
+    }
+
+    /* Scroll reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s ease, transform 0.5s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Responsivo */
+    @media (max-width: 900px) {
+      .hero-grid,
+      .sobre-grid,
+      .cta-final {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero {
+        padding-top: 28px;
+      }
+
+      .section-header {
+        text-align: left;
+      }
+
+      .cta-actions {
+        align-items: flex-start;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        position: absolute;
+        top: 56px;
+        right: 16px;
+        left: 16px;
+        padding: 10px 12px;
+        border-radius: 16px;
+        background: #ffffff;
+        box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        display: none;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .servicos-grid,
+      .beneficios-grid,
+      .depo-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-title {
+        font-size: 26px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-ctas {
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .btn-primary,
+      .btn-secondary {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav">
+      <div class="logo">
+        <div class="logo-icon">C+</div>
+        <div>
+          <div class="logo-text-main">Conecta Mais</div>
+          <div class="logo-text-sub">Autoimagem Profissional na Internet</div>
+        </div>
+      </div>
+
+      <div class="menu-toggle" id="menuToggle">☰</div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#depoimentos">Clientes</a>
+        <a href="#contato">Contato</a>
+        <button class="btn-nav" onclick="window.location.href='COLE_AQUI_O_LINK_DO_SEU_FORM'">
+          Quero melhorar minha imagem <span>↗</span>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <div class="badge-top">
+            <div class="badge-top-dot"></div>
+            Primeira impressão importa
+          </div>
+          <h1 class="hero-title">
+            Sua imagem online precisa<br />
+            refletir quem você realmente é.<br />
+            <span>Conecta Mais te ajuda a parecer tão profissional quanto você é.</span>
+          </h1>
+          <p class="hero-subtitle">
+            Em vez de um perfil jogado, fotos aleatórias e bio confusa, você passa a ter
+            uma presença clara, coerente e visualmente forte nas redes.
+          </p>
+
+          <div class="hero-ctas">
+            <button class="btn-primary" onclick="window.location.href='COLE_AQUI_O_LINK_DO_SEU_FORM'">
+              ✍️ Quero melhorar minha autoimagem online
+            </button>
+            <a href="#servicos" class="btn-secondary">
+              Ver como funciona na prática
+            </a>
+          </div>
+
+          <div class="hero-note">
+            <div class="hero-note-dot"></div>
+            <span>Você me mostra como está hoje, eu desenho como deveria estar.</span>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Resumo visual do serviço">
+          <div class="hero-card-circle"></div>
+          <div class="hero-card-tag">Diagnóstico visual • Redes sociais</div>
+          <div class="hero-card-title">Seu perfil vira vitrine, não só um cadastro.</div>
+          <div class="hero-card-sub">
+            Um olhar de fora, organizado, pra alinhar foto, bio, destaques, conteúdo fixo
+            e até como você responde quem chega até você.
+          </div>
+          <ul class="hero-list">
+            <li>
+              <span>•</span>
+              <div>
+                <strong>Análise de perfil</strong><br>
+                foto, nome, arroba, bio, link, destaques e feed inicial.
+              </div>
+            </li>
+            <li>
+              <span>•</span>
+              <div>
+                <strong>Proposta de visual mínimo</strong><br>
+                cores base, estrutura simples e coerente com quem você é.
+              </div>
+            </li>
+            <li>
+              <span>•</span>
+              <div>
+                <strong>Roteiro prático</strong><br>
+                o que ajustar primeiro pra sua imagem já subir de nível.
+              </div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- SOBRE -->
+    <section id="sobre" class="reveal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Sobre a Conecta Mais</div>
+          <h2 class="section-title">Mais do que “postar bonito”: <span>é sobre como você é percebido.</span></h2>
+          <p class="section-subtitle">
+            A maioria das pessoas até posta, mas não tem uma linha clara: cada foto parece de um universo.
+            A Conecta Mais entra pra dar cara, lógica e intenção à sua presença online.
+          </p>
+        </div>
+
+        <div class="sobre-grid">
+          <div class="sobre-text">
+            <p>
+              Sabe quando o perfil da pessoa não combina com o que ela fala que faz?
+              Ou quando o feed parece antigo, improvisado, sem identidade?
+            </p>
+            <p>
+              A ideia aqui não é transformar você em influencer, e sim em alguém
+              que passa confiança e profissionalismo só de bater o olho.
+            </p>
+            <ul class="sobre-list">
+              <li><span>✔</span> Você deixa de ter vergonha de passar seu @</li>
+              <li><span>✔</span> Quem chega entende rápido o que você faz</li>
+              <li><span>✔</span> Sua imagem começa a jogar a seu favor, não contra</li>
+            </ul>
+          </div>
+
+          <div class="sobre-card">
+            <div class="sobre-card-header">
+              <div class="sobre-card-title">Como funciona na prática</div>
+              <div class="sobre-card-pill">Processo simples</div>
+            </div>
+            <div class="sobre-card-body">
+              <p><strong>1. Você preenche um formulário rápido</strong><br>
+                mostrando seus perfis atuais, área de atuação e o que te incomoda na sua imagem hoje.</p>
+              <p><strong>2. Eu analiso e desenho seu “antes e depois”</strong><br>
+                com ajustes de visual, texto, estrutura e pontos-chave de posicionamento.</p>
+              <p><strong>3. Você recebe um kit prático</strong><br>
+                com orientações claras do que mudar e, se quiser, apoio na implementação.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVIÇOS -->
+    <section id="servicos" class="bg-alt reveal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Serviços</div>
+          <h2 class="section-title">O que a Conecta Mais faz pela sua autoimagem</h2>
+          <p class="section-subtitle">
+            Serviços pensados pra quem quer uma presença profissional sem precisar virar designer ou social media.
+          </p>
+        </div>
+
+        <div class="servicos-grid">
+          <article class="card">
+            <div class="card-icon">📸</div>
+            <h3 class="card-title">Ajuste de Perfil Profissional</h3>
+            <p class="card-text">
+              Para quem quer que Instagram, WhatsApp e outras redes pareçam realmente de alguém sério no que faz.
+            </p>
+            <ul class="card-list">
+              <li><span>•</span> Revisão de foto, nome, bio e link</li>
+              <li><span>•</span> Sugestões de frases, emojis e CTA</li>
+              <li><span>•</span> Estrutura mínima pros destaques</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🎨</div>
+            <h3 class="card-title">Identidade Visual Essencial para Redes</h3>
+            <p class="card-text">
+              Um “pacote base” de visual pra você manter coerência sem frescura.
+            </p>
+            <ul class="card-list">
+              <li><span>•</span> Definição de cores e estilo geral</li>
+              <li><span>•</span> Diretrizes simples de uso (o que evitar)</li>
+              <li><span>•</span> Sugestão de formatos de posts fixos</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🧩</div>
+            <h3 class="card-title">Organização Básica de Presença e Contatos</h3>
+            <p class="card-text">
+              Um complemento pra sua autoimagem: suas conversas e orçamentos fazem sentido junto com o visual.
+            </p>
+            <ul class="card-list">
+              <li><span>•</span> Planilha simples pra não perder conversas importantes</li>
+              <li><span>•</span> Visão clara de quem chegou por cada canal</li>
+              <li><span>•</span> Foco em manter a experiência coerente do início ao fim</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- BENEFÍCIOS -->
+    <section id="beneficios" class="reveal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Benefícios</div>
+          <h2 class="section-title">O que muda quando sua autoimagem acompanha seu potencial</h2>
+          <p class="section-subtitle">
+            Não é só estética: é a forma como as pessoas passam a olhar pra você e pro seu trabalho.
+          </p>
+        </div>
+
+        <div class="beneficios-grid">
+          <article class="card">
+            <div class="card-icon">💬</div>
+            <h3 class="card-title">Você passa a mensagem certa</h3>
+            <p class="card-text">
+              Sua bio, suas fotos e seus destaques começam a contar a mesma história:
+              quem você é, o que faz e como ajuda.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">💡</div>
+            <h3 class="card-title">Você vira referência na memória das pessoas</h3>
+            <p class="card-text">
+              Um perfil bem cuidado é mais fácil de lembrar e indicar do que alguém
+              que “posta qualquer coisa de vez em quando”.
+            </p>
+          </article>
+
+          <article class="card">
+            <div class="card-icon">🧠</div>
+            <h3 class="card-title">Sua autoconfiança aumenta</h3>
+            <p class="card-text">
+              Saber que sua presença online não te sabota faz diferença na hora de enviar um orçamento,
+              fechar proposta ou se apresentar.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DEPOIMENTOS -->
+    <section id="depoimentos" class="bg-alt reveal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Clientes</div>
+          <h2 class="section-title">Como a imagem deles mudou (e a sua pode mudar também)</h2>
+          <p class="section-subtitle">
+            Depoimentos fictícios por enquanto – mas já mostram o tipo de transformação que a Conecta Mais busca.
+          </p>
+        </div>
+
+        <div class="depo-grid">
+          <article class="depo-card">
+            <p class="depo-text">
+              “Eu morria de vergonha do meu Instagram, parecia um diário aleatório. Depois do ajuste,
+              eu realmente me enxergo ali como profissional.”
+            </p>
+            <div class="depo-footer">
+              <div class="depo-avatar">A</div>
+              <div>
+                <div class="depo-name">Ana Paula</div>
+                <div class="depo-role">Designer Autônoma</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="depo-card">
+            <p class="depo-text">
+              “Não é só estética, é clareza. Minha bio, meus destaques e meus links finalmente
+              explicam o que eu faço sem eu precisar dar um textão.”
+            </p>
+            <div class="depo-footer">
+              <div class="depo-avatar">M</div>
+              <div>
+                <div class="depo-name">Marcos Silva</div>
+                <div class="depo-role">Consultor</div>
+              </div>
+            </div>
+          </article>
+
+          <article class="depo-card">
+            <p class="depo-text">
+              “Depois de mudar meu perfil, eu parei de achar que ‘não era pra mim’ postar.
+              Agora eu tenho orgulho de compartilhar meu @.”
+            </p>
+            <div class="depo-footer">
+              <div class="depo-avatar">C</div>
+              <div>
+                <div class="depo-name">Carla N.</div>
+                <div class="depo-role">Profissional Liberal</div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA FINAL -->
+    <section class="reveal">
+      <div class="container cta-final">
+        <div>
+          <h2>Sua imagem online está no nível da pessoa que você já é?</h2>
+          <p>
+            Se a resposta for “ainda não”, esse é o momento perfeito pra ajustar isso.
+            Você me mostra seu cenário atual, e eu te devolvo clareza e direcionamento sobre sua presença digital.
+          </p>
+        </div>
+        <div class="cta-actions">
+          <button class="btn-primary" onclick="window.location.href='COLE_AQUI_O_LINK_DO_SEU_FORM'">
+            ✍️ Preencher formulário de avaliação
+          </button>
+          <a href="#contato" class="btn-secondary">
+            Falar comigo antes pelo WhatsApp
+          </a>
+          <div class="cta-badge">
+            ⏳ Resposta em até 1 dia útil.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTATO -->
+    <section id="contato" class="reveal">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-kicker">Contato</div>
+          <h2 class="section-title">Pronto pra ajustar a forma como o mundo te vê?</h2>
+          <p class="section-subtitle">
+            Escolha o jeito que funciona melhor pra você: formulário completo ou conversa rápida.
+          </p>
+        </div>
+
+        <div class="sobre-grid">
+          <div class="sobre-text">
+            <p><strong>Formulário de avaliação</strong><br>
+              Ideal se você já quer ir direto ao ponto e mostrar seus perfis, dores e objetivos.</p>
+            <p><strong>WhatsApp</strong><br>
+              Pra quem prefere trocar uma ideia antes de formalizar qualquer coisa.</p>
+            <ul class="sobre-list">
+              <li><span>✔</span> Linguagem simples, sem termos difíceis</li>
+              <li><span>✔</span> Processo sem pressão pra “fechar na hora”</li>
+            </ul>
+          </div>
+          <div class="sobre-card">
+            <div class="sobre-card-body">
+              <p><strong>1. Formulário de avaliação</strong><br>
+                <a href="COLE_AQUI_O_LINK_DO_SEU_FORM" target="_blank" rel="noopener">
+                  Abrir formulário de avaliação ↗
+                </a>
+              </p>
+              <p><strong>2. WhatsApp</strong><br>
+                <a href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" rel="noopener">
+                  Falar comigo no WhatsApp ↗
+                </a>
+              </p>
+              <p style="margin-top: 8px; color: var(--cinza); font-size: 12px;">
+                A autoimagem que você passa hoje não precisa ser definitiva.
+                Dá pra ajustar, melhorar e deixar muito mais alinhada com quem você é de verdade.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-line">
+      <div>© <span id="yearSpan"></span> Conecta Mais. Todos os direitos reservados.</div>
+      <div class="footer-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#servicos">Serviços</a>
+        <a href="#contato">Contato</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Ano automático no rodapé
+    document.getElementById("yearSpan").textContent = new Date().getFullYear();
+
+    // Menu mobile
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+
+    menuToggle.addEventListener("click", () => {
+      navLinks.classList.toggle("open");
+    });
+
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+      });
+    });
+
+    // Scroll reveal simples
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      {
+        threshold: 0.15
+      }
+    );
+
+    reveals.forEach(section => {
+      observer.observe(section);
+    });
+  </script>
+</body>
+</html>
