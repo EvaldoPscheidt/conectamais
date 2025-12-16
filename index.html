@@ -22,11 +22,7 @@
       --shadow-card: 0 18px 45px rgba(0, 0, 0, 0.06);
     }
 
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
@@ -36,15 +32,9 @@
       scroll-behavior: smooth;
     }
 
-    img {
-      max-width: 100%;
-      display: block;
-    }
+    img { max-width: 100%; display: block; }
 
-    a {
-      text-decoration: none;
-      color: inherit;
-    }
+    a { text-decoration: none; color: inherit; }
 
     .container {
       width: 100%;
@@ -77,17 +67,12 @@
       gap: 10px;
     }
 
-    .logo-icon {
-      width: 32px;
-      height: 32px;
-      border-radius: 999px;
-      background: radial-gradient(circle at 0% 0%, var(--amarelo), var(--roxo-primario), var(--roxo-secundario));
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: #fff;
-      font-weight: 700;
-      font-size: 18px;
+    /* ✅ LOGO EM IMAGEM (substitui o C+) */
+    .logo-img {
+      width: 38px;
+      height: 38px;
+      object-fit: contain;
+      border-radius: 999px; /* se não quiser arredondado, pode remover */
     }
 
     .logo-text-main {
@@ -131,15 +116,9 @@
       cursor: pointer;
     }
 
-    .btn-nav span {
-      font-size: 16px;
-    }
+    .btn-nav span { font-size: 16px; }
 
-    .menu-toggle {
-      display: none;
-      font-size: 24px;
-      cursor: pointer;
-    }
+    .menu-toggle { display: none; font-size: 24px; cursor: pointer; }
 
     /* Botões gerais */
     .btn-primary {
@@ -263,12 +242,12 @@
       background: #22C55E;
     }
 
-    /* >>> CARD AJUSTADO AQUI <<< */
+    /* Card hero */
     .hero-card {
       border-radius: 22px;
       padding: 18px 18px 16px;
-      background: linear-gradient(135deg, #5A0EE0, #7A3BFA); /* degradê mais escuro */
-      color: #F2F2F3; /* branco um pouco mais “forte” */
+      background: linear-gradient(135deg, #5A0EE0, #7A3BFA);
+      color: #F2F2F3;
       box-shadow: 0 18px 45px rgba(0, 0, 0, 0.15);
       position: relative;
       overflow: hidden;
@@ -290,7 +269,7 @@
 
     .hero-card-sub {
       font-size: 12px;
-      opacity: 1; /* texto 100% visível */
+      opacity: 1;
       margin-bottom: 14px;
     }
 
@@ -324,15 +303,9 @@
       right: -60px;
     }
 
-    /* Seções genéricas */
-    section {
-      padding: 40px 0;
-    }
+    section { padding: 40px 0; }
 
-    .section-header {
-      text-align: left;
-      margin-bottom: 24px;
-    }
+    .section-header { text-align: left; margin-bottom: 24px; }
 
     .section-kicker {
       font-size: 12px;
@@ -343,10 +316,7 @@
       margin-bottom: 4px;
     }
 
-    .section-title {
-      font-size: 22px;
-      margin-bottom: 4px;
-    }
+    .section-title { font-size: 22px; margin-bottom: 4px; }
 
     .section-title span {
       background: linear-gradient(135deg, var(--roxo-primario), var(--roxo-secundario));
@@ -360,11 +330,8 @@
       max-width: 520px;
     }
 
-    .bg-alt {
-      background: var(--bg-secao);
-    }
+    .bg-alt { background: var(--bg-secao); }
 
-    /* Sobre */
     .sobre-grid {
       display: grid;
       grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
@@ -386,16 +353,9 @@
       margin-top: 4px;
     }
 
-    .sobre-list li {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-    }
+    .sobre-list li { display: flex; align-items: center; gap: 8px; }
 
-    .sobre-list span {
-      font-size: 14px;
-      color: #22C55E;
-    }
+    .sobre-list span { font-size: 14px; color: #22C55E; }
 
     .sobre-card {
       border-radius: var(--radius);
@@ -414,10 +374,7 @@
       gap: 8px;
     }
 
-    .sobre-card-title {
-      font-weight: 600;
-      font-size: 13px;
-    }
+    .sobre-card-title { font-weight: 600; font-size: 13px; }
 
     .sobre-card-pill {
       padding: 3px 8px;
@@ -430,19 +387,11 @@
       letter-spacing: 0.14em;
     }
 
-    .sobre-card-body p {
-      margin-bottom: 4px;
-      color: var(--cinza);
-    }
+    .sobre-card-body p { margin-bottom: 4px; color: var(--cinza); }
 
-    .sobre-card-body strong {
-      color: var(--texto-escuro);
-    }
+    .sobre-card-body strong { color: var(--texto-escuro); }
 
-    /* Cards / Grids */
-    .servicos-grid,
-    .beneficios-grid,
-    .depo-grid {
+    .servicos-grid, .beneficios-grid, .depo-grid {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 18px;
@@ -470,36 +419,16 @@
       color: var(--roxo-primario);
     }
 
-    .card-title {
-      font-weight: 600;
-      margin-bottom: 4px;
-      font-size: 14px;
-    }
+    .card-title { font-weight: 600; margin-bottom: 4px; font-size: 14px; }
 
-    .card-text {
-      color: var(--cinza);
-      margin-bottom: 8px;
-    }
+    .card-text { color: var(--cinza); margin-bottom: 8px; }
 
-    .card-list {
-      list-style: none;
-      display: grid;
-      gap: 4px;
-      padding-left: 0;
-    }
+    .card-list { list-style: none; display: grid; gap: 4px; padding-left: 0; }
 
-    .card-list li {
-      display: flex;
-      align-items: center;
-      gap: 6px;
-    }
+    .card-list li { display: flex; align-items: center; gap: 6px; }
 
-    .card-list span {
-      font-size: 14px;
-      color: var(--roxo-primario);
-    }
+    .card-list span { font-size: 14px; color: var(--roxo-primario); }
 
-    /* Depoimentos */
     .depo-card {
       border-radius: var(--radius);
       border: 1px solid rgba(148, 163, 184, 0.3);
@@ -514,12 +443,7 @@
       font-style: italic;
     }
 
-    .depo-footer {
-      display: flex;
-      align-items: center;
-      gap: 8px;
-      font-size: 11px;
-    }
+    .depo-footer { display: flex; align-items: center; gap: 8px; font-size: 11px; }
 
     .depo-avatar {
       width: 26px;
@@ -534,15 +458,10 @@
       font-size: 12px;
     }
 
-    .depo-name {
-      font-weight: 600;
-    }
+    .depo-name { font-weight: 600; }
 
-    .depo-role {
-      color: var(--cinza);
-    }
+    .depo-role { color: var(--cinza); }
 
-    /* CTA final */
     .cta-final {
       border-radius: 24px;
       padding: 22px 20px 20px;
@@ -556,16 +475,9 @@
       margin-bottom: 24px;
     }
 
-    .cta-final h2 {
-      font-size: 20px;
-      margin-bottom: 6px;
-    }
+    .cta-final h2 { font-size: 20px; margin-bottom: 6px; }
 
-    .cta-final p {
-      font-size: 14px;
-      opacity: 0.9;
-      max-width: 460px;
-    }
+    .cta-final p { font-size: 14px; opacity: 0.9; max-width: 460px; }
 
     .cta-actions {
       display: flex;
@@ -574,12 +486,8 @@
       gap: 8px;
     }
 
-    .cta-badge {
-      font-size: 11px;
-      opacity: 0.9;
-    }
+    .cta-badge { font-size: 11px; opacity: 0.9; }
 
-    /* Footer */
     footer {
       border-top: 1px solid rgba(148, 163, 184, 0.35);
       padding: 14px 0 20px;
@@ -595,47 +503,25 @@
       align-items: center;
     }
 
-    .footer-links {
-      display: flex;
-      gap: 12px;
-    }
+    .footer-links { display: flex; gap: 12px; }
 
-    .footer-links a {
-      text-decoration: underline;
-      text-decoration-style: dotted;
-    }
+    .footer-links a { text-decoration: underline; text-decoration-style: dotted; }
 
-    /* Scroll reveal */
     .reveal {
       opacity: 0;
       transform: translateY(16px);
       transition: opacity 0.5s ease, transform 0.5s ease;
     }
 
-    .reveal.visible {
-      opacity: 1;
-      transform: translateY(0);
-    }
+    .reveal.visible { opacity: 1; transform: translateY(0); }
 
-    /* Responsivo */
     @media (max-width: 900px) {
-      .hero-grid,
-      .sobre-grid,
-      .cta-final {
+      .hero-grid, .sobre-grid, .cta-final {
         grid-template-columns: minmax(0, 1fr);
       }
-
-      .hero {
-        padding-top: 28px;
-      }
-
-      .section-header {
-        text-align: left;
-      }
-
-      .cta-actions {
-        align-items: flex-start;
-      }
+      .hero { padding-top: 28px; }
+      .section-header { text-align: left; }
+      .cta-actions { align-items: flex-start; }
     }
 
     @media (max-width: 768px) {
@@ -654,23 +540,15 @@
         display: none;
       }
 
-      .nav-links.open {
-        display: flex;
-      }
+      .nav-links.open { display: flex; }
 
-      .menu-toggle {
-        display: block;
-      }
+      .menu-toggle { display: block; }
 
-      .servicos-grid,
-      .beneficios-grid,
-      .depo-grid {
+      .servicos-grid, .beneficios-grid, .depo-grid {
         grid-template-columns: minmax(0, 1fr);
       }
 
-      .hero-title {
-        font-size: 26px;
-      }
+      .hero-title { font-size: 26px; }
     }
 
     @media (max-width: 480px) {
@@ -678,9 +556,7 @@
         flex-direction: column;
         align-items: stretch;
       }
-
-      .btn-primary,
-      .btn-secondary {
+      .btn-primary, .btn-secondary {
         width: 100%;
         justify-content: center;
       }
@@ -693,7 +569,8 @@
   <header>
     <div class="container nav">
       <div class="logo">
-        <div class="logo-icon">C+</div>
+        <!-- ✅ LOGO EM IMAGEM -->
+        <img src="img/logo.png" alt="Conecta Mais" class="logo-img">
         <div>
           <div class="logo-text-main">Conecta Mais</div>
           <div class="logo-text-sub">Autoimagem Profissional na Internet</div>
@@ -995,115 +872,4 @@
           </p>
         </div>
         <div class="cta-actions">
-          <button class="btn-primary" onclick="window.location.href='COLE_AQUI_O_LINK_DO_SEU_FORM'">
-            ✍️ Preencher formulário de avaliação
-          </button>
-          <a href="#contato" class="btn-secondary">
-            Falar comigo antes pelo WhatsApp
-          </a>
-          <div class="cta-badge">
-            ⏳ Resposta em até 1 dia útil.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTATO -->
-    <section id="contato" class="reveal">
-      <div class="container">
-        <div class="section-header">
-          <div class="section-kicker">Contato</div>
-          <h2 class="section-title">Pronto pra ajustar a forma como o mundo te vê?</h2>
-          <p class="section-subtitle">
-            Escolha o jeito que funciona melhor pra você: formulário completo ou conversa rápida.
-          </p>
-        </div>
-
-        <div class="sobre-grid">
-          <div class="sobre-text">
-            <p><strong>Formulário de avaliação</strong><br>
-              Ideal se você já quer ir direto ao ponto e mostrar seus perfis, dores e objetivos.</p>
-            <p><strong>WhatsApp</strong><br>
-              Pra quem prefere trocar uma ideia antes de formalizar qualquer coisa.</p>
-            <ul class="sobre-list">
-              <li><span>✔</span> Linguagem simples, sem termos difíceis</li>
-              <li><span>✔</span> Processo sem pressão pra “fechar na hora”</li>
-            </ul>
-          </div>
-          <div class="sobre-card">
-            <div class="sobre-card-body">
-              <p><strong>1. Formulário de avaliação</strong><br>
-                <a href="COLE_AQUI_O_LINK_DO_SEU_FORM" target="_blank" rel="noopener">
-                  Abrir formulário de avaliação ↗
-                </a>
-              </p>
-              <p><strong>2. WhatsApp</strong><br>
-                <a href="https://wa.me/SEU_NUMERO_AQUI" target="_blank" rel="noopener">
-                  Falar comigo no WhatsApp ↗
-                </a>
-              </p>
-              <p style="margin-top: 8px; color: var(--cinza); font-size: 12px;">
-                A autoimagem que você passa hoje não precisa ser definitiva.
-                Dá pra ajustar, melhorar e deixar muito mais alinhada com quem você é de verdade.
-              </p>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer>
-    <div class="container footer-line">
-      <div>© <span id="yearSpan"></span> Conecta Mais. Todos os direitos reservados.</div>
-      <div class="footer-links">
-        <a href="#sobre">Sobre</a>
-        <a href="#servicos">Serviços</a>
-        <a href="#contato">Contato</a>
-      </div>
-    </div>
-  </footer>
-
-  <script>
-    // Ano automático no rodapé
-    document.getElementById("yearSpan").textContent = new Date().getFullYear();
-
-    // Menu mobile
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
-
-    menuToggle.addEventListener("click", () => {
-      navLinks.classList.toggle("open");
-    });
-
-    navLinks.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => {
-        navLinks.classList.remove("open");
-      });
-    });
-
-    // Scroll reveal simples
-    const reveals = document.querySelectorAll(".reveal");
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach(entry => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      {
-        threshold: 0.15
-      }
-    );
-
-    reveals.forEach(section => {
-      observer.observe(section);
-    });
-  </script>
-</body>
-</html>
+          <button class="btn-primary" onclick="wind
