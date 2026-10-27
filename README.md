@@ -10,6 +10,8 @@ Código-fonte dos sites da Conecta Mais, com histórico de alterações no GitHu
 
 AutoPrime e VivaBem são marcas fictícias de portfólio. Seus formulários apenas simulam solicitações; não enviam dados nem confirmam agendamentos. As fotografias das demonstrações foram geradas com IA.
 
+- [Briefing do cliente](https://conecta-mais.pages.dev/briefing/) — questionário com exportação das respostas em TXT; sem envio automático.
+
 ## Tecnologias e estrutura
 
 HTML, CSS, JavaScript e ícones SVG, sem etapa de compilação.
@@ -17,6 +19,7 @@ HTML, CSS, JavaScript e ícones SVG, sem etapa de compilação.
 - `index.html`: página principal.
 - `autoprime/`: página e imagens da AutoPrime.
 - `vivabem/`: página e imagens da VivaBem.
+- `briefing/`: questionário do projeto; rascunho local opcional, cópia e download de respostas.
 
 O repositório também conserva arquivos antigos; a publicação deve usar somente os arquivos efetivamente necessários ao site atual.
 
