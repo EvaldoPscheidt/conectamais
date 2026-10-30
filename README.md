@@ -53,3 +53,7 @@ O acesso usa senha exclusiva, verificada por hash no servidor, e cookie de sess�
 Os segredos ADMIN_PASSWORD_HASH e SESSION_SECRET são configurados no Cloudflare. Nunca incluí-los no código, no Git ou no diretório público. Há limites de tentativas de login e envio. Não adicionar dados reais de clientes aos testes.
 
 Para publicar, preparar somente os arquivos públicos de index.html, autoprime/, vivabem/, briefing/ e painel/ em ../cloudflare-public e executar Wrangler a partir deste checkout, que contém functions/ e wrangler.json. Aplicar database/schema.sql somente na criação ou alteração do esquema. Fazer cópias protegidas das respostas antes de alterações no banco.
+
+## Alvor Barbearia
+
+[Ver demonstração](https://conecta-mais.pages.dev/alvor/) — marca fictícia, imagem gerada por IA, formulário local sem envio ou persistência. O portfólio principal usa carrossel manual com setas, teclado e rolagem por toque.
