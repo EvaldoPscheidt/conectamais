@@ -57,3 +57,7 @@ Para publicar, preparar somente os arquivos públicos de index.html, autoprime/,
 ## Alvor Barbearia
 
 [Ver demonstração](https://conecta-mais.pages.dev/alvor/) — marca fictícia, imagem gerada por IA, formulário local sem envio ou persistência. O portfólio principal usa carrossel manual com setas, teclado e rolagem por toque.
+
+## Forno & Fatia
+
+Demonstração fictícia de pizzaria em https://conecta-mais.pages.dev/forno-e-fatia/ com três imagens geradas por IA, filtro de cardápio, tamanhos e sacola em memória. Não envia pedidos, não persiste dados e não processa pagamentos.
