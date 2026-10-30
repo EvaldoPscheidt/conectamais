@@ -65,3 +65,7 @@ Demonstração fictícia de pizzaria em https://conecta-mais.pages.dev/forno-e-f
 ## Pata & Pelo
 
 Demonstração fictícia de banho e tosa em https://conecta-mais.pages.dev/pata-e-pelo/ com imagens geradas por IA, preços ilustrativos por porte e simulação local de agendamento. Não envia nem persiste dados.
+
+## Portfólio para compartilhar
+
+https://conecta-mais.pages.dev/portfolio/ reúne os cinco demonstrativos em uma página própria. Os cartões usam a mesma estrutura de miniatura de site do carrossel principal.
