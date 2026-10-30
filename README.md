@@ -61,3 +61,7 @@ Para publicar, preparar somente os arquivos públicos de index.html, autoprime/,
 ## Forno & Fatia
 
 Demonstração fictícia de pizzaria em https://conecta-mais.pages.dev/forno-e-fatia/ com três imagens geradas por IA, filtro de cardápio, tamanhos e sacola em memória. Não envia pedidos, não persiste dados e não processa pagamentos.
+
+## Pata & Pelo
+
+Demonstração fictícia de banho e tosa em https://conecta-mais.pages.dev/pata-e-pelo/ com imagens geradas por IA, preços ilustrativos por porte e simulação local de agendamento. Não envia nem persiste dados.
