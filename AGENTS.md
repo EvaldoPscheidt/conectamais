@@ -13,3 +13,5 @@ Este repositório é o histórico de código dos sites. O proprietário solicito
 - Briefings são armazenados no D1 conecta-mais-briefings, binding DB. Nunca salvar respostas no GitHub, na pasta pública ou em logs.
 - Publicar Functions a partir deste checkout, usando wrangler.json, sem copiar functions/, lib/ ou database/ para o diretório estático.
 - Painel exige senha exclusiva (hash e segredo de sessão só no Cloudflare). Preservar autenticação, cookies seguros e validação do servidor. Não reconfigurar credenciais sem autorização.
+
+- Após cada publicação bem-sucedida, confirmar a versão de produção ativa e excluir as demais publicações do projeto Cloudflare Pages. O proprietário determinou que apenas uma versão permaneça publicada. Preservar o histórico no GitHub; nunca excluir o projeto, a publicação ativa ou o banco D1. Compartilhar somente https://conecta-mais.pages.dev/ e seus caminhos, nunca URLs com identificador de publicação.
